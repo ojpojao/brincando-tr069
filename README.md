@@ -27,6 +27,13 @@ Os módulos foram configurados para responder somente em localhost e por causa d
   - Proxmox 6.3-2, cpu=host
   - NodeJS 18.x LTS
 
+### Executando
+```
+git clone https://github.com/ojpojao/brincando-tr069.git
+cd brincando-tr069
+sudo ./install.sh
+```
+
 Ao final, deverás ter algo parecido com isso:
 
 ![asdas](https://raw.githubusercontent.com/ojpojao/brincando-tr069/main/setup_genieacs.png)
