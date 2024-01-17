@@ -19,12 +19,12 @@ MONGODB_VERSION="5.0"
 GENIEACS_VERSION="1.2.9"
 
 export SSL_COUNTRY_NAME="BR"
-export SSL_PROVINCE_NAME="PARAZUDO"
+export SSL_PROVINCE_NAME="PARA"
 export SSL_LOCALITY_NAME="ANANINDEUA"
-export SSL_ORGANIZATION_NAME="JOAO TRANQUEIRAS LTDA"
-export SSL_ORGANIZATION_UNIT="Centro de Traquinagens(NOC)"
-export SSL_COMMON_NAME="cwmp.teste.local"
-export SSL_EMAIL_ADDRESS="ojpojao@teste.local"
+export SSL_ORGANIZATION_NAME="BUNEK LTDA"
+export SSL_ORGANIZATION_UNIT="Centro de Cachorragens - (iNHOC)"
+export SSL_COMMON_NAME="tr069.bunek.local"
+export SSL_EMAIL_ADDRESS="bunek@teste.local"
 
 function install_pre_reqs() {
     apt update && sudo apt install -y \
@@ -251,6 +251,9 @@ server {
     # proxy_set_header X-Forwarded-Proto \$scheme;
     # proxy_read_timeout 3600;
     # proxy_pass_request_headers on;
+
+    # para subir firmware maior que 1MB na UI do GenieACS
+    client_max_body_size 100M;
   }
 }
 # CWMP
